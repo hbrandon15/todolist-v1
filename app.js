@@ -7,6 +7,7 @@ let items = ["buy food", "Cook food", "eat food"]; // collection of items
 app.set("view engine", "ejs"); // setting view engine
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   let today = new Date();
